@@ -9,5 +9,12 @@ public enum VendorType {
     UPBIT("upbit"),
     BITHUMB("bithumb");
 
+    public static VendorType fromString(String str){
+        for(VendorType code :VendorType.values()){
+            if(code.name.equals(str))
+                return code;
+        }
+        return null;
+    }
     public String name;
 }
